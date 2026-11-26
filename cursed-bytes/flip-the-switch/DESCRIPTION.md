@@ -20,7 +20,7 @@ In computers, a byte is the smallest addressable unit for many reasons. One reas
 
 This is just one of the many reasons we address only one byte at a time. Though, you can still change and perform operations on just a bit or a bunch of bits.
 
-Now, one way to read these zeroes and ones, also known as binary, is to read them as numbers, just like our normal number system, except that there, each place is worth 10 times the place to its right, and here, it's worth just double.
+Now, one way to read these zeroes and ones, also known as binary, is to read them as numbers, just like our normal everyday number system, called decimal, except that there, each place is worth 10 times the place to its right, and here, it's worth just double.
 
 **123 in decimal**
 
@@ -41,6 +41,10 @@ Now, one way to read these zeroes and ones, also known as binary, is to read the
 64 + 32 + 16 + 8 + 0 + 2 + 1 = **123**
 
 Reading the digits is very easy: you just add all the place values where there is a 1.
+
+Zeroes on the left don't change the value, just like in decimal: 0011 is the same as 11, which is 3.
+
+Since 1001 could also be read as the decimal number one thousand and one, hackers often write 0b in front of binary numbers to make it clear, like 0b1001, which is 9.
 
 **01001000**
 
