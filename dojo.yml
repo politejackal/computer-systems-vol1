@@ -1,16 +1,17 @@
-id: cs-ahp-vol1
-name: "Computer Systems: A Hacker's Perspective, Volume 1: The Dark Arts"
+id: systems-black-magic-vol1
+name: "Systems Black Magic, Volume 1: The Dark Arts"
 award:
   emoji: 🔥
 description: |
-  **Computer Systems: A Hacker's Perspective** takes you deep into the machine, through C, x86-64 assembly, memory and the operating system, to the dark side of computer systems.
+  **Systems Black Magic** takes you deep into the machine, through C, x86-64 assembly, memory and the operating system, to the dark side of computer systems.
 
   In this volume, you will learn how information is represented as bits, how programs are compiled, how the hardware executes them, and how the operating system manages processes, memory and files.
-
-  Based on *Computer Systems: A Programmer's Perspective* by Randal E. Bryant and David R. O'Hallaron. Not affiliated with or endorsed by the authors or their publishers.
 modules:
   - id: cursed-bytes
     name: "Cursed Bytes: Data Representation"
+    challenges:
+      - id: flip-the-switch
+        name: "Flip the Switch"
   - id: summoning-ritual
     name: "The Summoning Ritual: Compilation"
   - id: bare-metal
