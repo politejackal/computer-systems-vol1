@@ -55,4 +55,15 @@ Since 1001 could also be read as the decimal number one thousand and one, hacker
 
 64 + 8 = **72**
 
-**Now the challenge:** read 3 4-bit numbers and 3 8-bit numbers. Run `/challenge/run` to start.
+Now, to convert decimal to binary, we just go the other way. Start from the biggest place value that fits in your number, and put a 1 there. Subtract it from your number, and repeat with what's left. Every place value that doesn't fit gets a 0.
+
+**13 to binary**
+
+| Place value | 8 | 4 | 2 | 1 |
+|---|---|---|---|---|
+| Fits? | 8 fits, 13 − 8 = 5 | 4 fits, 5 − 4 = 1 | 2 doesn't fit | 1 fits, 1 − 1 = 0 |
+| Digit | 1 | 1 | 0 | 1 |
+
+So 13 is **0b1101**.
+
+**Now the challenge:** read 3 4-bit numbers and 3 8-bit numbers, then convert 3 decimal numbers to binary. Run `/challenge/run` to start.
