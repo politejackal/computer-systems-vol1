@@ -12,6 +12,8 @@ modules:
     challenges:
       - id: flip-the-switch
         name: "Flip the Switch"
+      - id: hexed
+        name: "Hexed"
   - id: summoning-ritual
     name: "The Summoning Ritual: Compilation"
   - id: bare-metal
