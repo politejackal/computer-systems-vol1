@@ -27,6 +27,8 @@ So the characters go like:
 
 So one hex digit represents 4 bits. 8 bits make 1 byte, so 2 hex digits represent 1 byte. Remember it, it will come in handy: every byte you see in a memory dump, a debugger, or an exploit is written as exactly 2 hex digits, like `41` or `ff`.
 
+Now, just like the prefix 0b stands for binary, hex has the prefix 0x! Also, hex doesn't care about uppercase or lowercase: 0xFF and 0xff are the same. Most hacking tools print it in lowercase.
+
 To convert binary to hex, break the binary into 4-bit chunks, **starting from the right**. If the leftmost chunk has fewer than 4 bits, add zeroes to its left. Then just calculate each chunk in decimal, and whatever it is from 0 to 15, use the hex character for that value. Do that for each chunk, and you can convert any big number from binary to hex.
 
 | Binary | 10 1101 |
@@ -54,7 +56,5 @@ To convert hex to binary, just do the opposite of binary to hex: replace each he
 | Binary | 0010 | 1101 |
 
 So 0x2D is **0b00101101**.
-
-Now, just like the prefix 0b stands for binary, hex has the prefix 0x! Also, hex doesn't care about uppercase or lowercase: 0xFF and 0xff are the same. Most hacking tools print it in lowercase.
 
 **Now the challenge:** convert 3 binary numbers to hex, then 3 hex numbers to binary. Run `/challenge/run_hexed` to start.
