@@ -1,9 +1,9 @@
-id: systems-black-magic-vol1
-name: "Systems Black Magic, Volume 1: The Dark Arts"
+id: computer-systems-vol1
+name: "Computer Systems, Volume I: The Dark Arts"
 award:
   emoji: 🔥
 description: |
-  **Systems Black Magic** takes you deep into the machine, through C, x86-64 assembly, memory and the operating system, to the dark side of computer systems.
+  **Computer Systems** takes you deep into the machine, through C, x86-64 assembly, memory and the operating system, to the dark side of computer systems.
 
   In this volume, you will learn how information is represented as bits, how programs are compiled, how the hardware executes them, and how the operating system manages processes, memory and files.
 modules:
