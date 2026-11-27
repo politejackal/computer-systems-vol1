@@ -1,0 +1,40 @@
+#!/usr/bin/exec-suid -- /usr/bin/python3 -I
+
+import random
+import sys
+
+
+def wrong():
+    print("Wrong.")
+    sys.exit(1)
+
+
+def ask(prompt, base, prefix):
+    try:
+        answer = input(prompt).strip().lower()
+        if answer.startswith(prefix):
+            answer = answer[len(prefix):]
+        return int(answer, base)
+    except (ValueError, EOFError):
+        wrong()
+
+
+def random_value(size):
+    if size == 1:
+        return random.randint(0x01, 0xFF)
+    return random.randint(0x100, 0xFFFF)
+
+
+for size in [1, 1, 2]:
+    value = random_value(size)
+    print(f"0b{value:0{size * 8}b}")
+    if ask("Hex: ", 16, "0x") != value:
+        wrong()
+
+for size in [1, 1, 2]:
+    value = random_value(size)
+    print(f"0x{value:0{size * 2}x}")
+    if ask("Binary: ", 2, "0b") != value:
+        wrong()
+
+print(open("/flag").read().strip())
