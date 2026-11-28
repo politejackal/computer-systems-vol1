@@ -148,4 +148,6 @@ Some patterns worth noticing:
 - 0x00 (`\0`), 0x0a (`\n`) and 0x20 (space) are special bytes you will meet again and again when sending input to programs.
 - If you ever see 0x41414141 somewhere, that is just AAAA. Hackers love sending lots of A's so they can spot their own input in memory. Anyway don't worry about this memory and all for now!
 
-You can always see this table on Linux by running `man ascii`.
+You can always see this table in the Linux terminal by running `man ascii`.
+
+**Now the challenge:** answer questions about the ASCII table and the patterns worth noticing. Run /challenge/run_lost_in_translation to start.
