@@ -57,4 +57,4 @@ To convert hex to binary, just do the opposite of binary to hex: replace each he
 
 So 0x2D is **0b00101101**.
 
-**Now the challenge:** convert 3 binary numbers to hex, then 3 hex numbers to binary. Run `/challenge/run_hexed` to start.
+**Now the challenge:** convert 3 binary numbers to hex, then 3 hex numbers to binary. Run `/challenge/run` to start.
