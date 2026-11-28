@@ -5,28 +5,29 @@ import string
 import sys
 
 
-def wrong():
-    print("Wrong.")
-    sys.exit(1)
+def read(prompt):
+    try:
+        return input(prompt).strip()
+    except EOFError:
+        sys.exit(1)
 
 
 def ask_hex(prompt, value):
-    try:
-        answer = input(prompt).strip().lower()
+    while True:
+        answer = read(prompt).lower()
         if answer.startswith("0x"):
             answer = answer[2:]
-        if int(answer, 16) != value:
-            wrong()
-    except (ValueError, EOFError):
-        wrong()
+        try:
+            if int(answer, 16) == value:
+                return
+        except ValueError:
+            pass
+        print("Wrong. Try again.")
 
 
 def ask_text(prompt, value):
-    try:
-        if input(prompt).strip() != value:
-            wrong()
-    except EOFError:
-        wrong()
+    while read(prompt) != value:
+        print("Wrong. Try again.")
 
 
 letters = random.sample(string.ascii_uppercase, 4)
