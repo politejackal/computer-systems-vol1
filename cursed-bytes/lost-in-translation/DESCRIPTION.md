@@ -150,4 +150,4 @@ Some patterns worth noticing:
 
 You can always see this table in the Linux terminal by running `man ascii`.
 
-**Now the challenge:** answer questions about the ASCII table and the patterns worth noticing. Run /challenge/run_lost_in_translation to start.
+**Now the challenge:** answer the questions it asks! Run /challenge/run to start.
