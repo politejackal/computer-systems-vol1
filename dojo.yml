@@ -14,6 +14,8 @@ modules:
         name: "Flip the Switch"
       - id: hexed
         name: "Hexed"
+      - id: lost-in-translation
+        name: "Lost in Translation"
   - id: summoning-ritual
     name: "The Summoning Ritual: Compilation"
   - id: bare-metal
