@@ -1,0 +1,55 @@
+#!/usr/bin/exec-suid -- /usr/bin/python3 -I
+
+import random
+import string
+import sys
+
+
+def wrong():
+    print("Wrong.")
+    sys.exit(1)
+
+
+def ask_hex(prompt, value):
+    try:
+        answer = input(prompt).strip().lower()
+        if answer.startswith("0x"):
+            answer = answer[2:]
+        if int(answer, 16) != value:
+            wrong()
+    except (ValueError, EOFError):
+        wrong()
+
+
+def ask_text(prompt, value):
+    try:
+        if input(prompt).strip() != value:
+            wrong()
+    except EOFError:
+        wrong()
+
+
+letters = random.sample(string.ascii_uppercase, 4)
+
+ask_hex(f"Hex of '{letters[0]}': ", ord(letters[0]))
+ask_hex(f"Hex of '{letters[1].lower()}': ", ord(letters[1].lower()))
+ask_hex(
+    f"Hex of '{letters[2]}' is 0x{ord(letters[2]):02x}. Hex of '{letters[2].lower()}': ",
+    ord(letters[2].lower()),
+)
+
+digit = random.choice(string.digits)
+ask_hex(f"Hex of the character '{digit}': ", ord(digit))
+
+special = [
+    ("Hex of null (\\0): ", 0x00),
+    ("Hex of newline (\\n): ", 0x0A),
+    ("Hex of space: ", 0x20),
+]
+random.shuffle(special)
+for prompt, value in special:
+    ask_hex(prompt, value)
+
+ask_text(f"0x{f'{ord(letters[3]):02x}' * 4} as text: ", letters[3] * 4)
+
+print(open("/flag").read().strip())
